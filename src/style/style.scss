@@ -1,0 +1,77 @@
+@use "utopia-core-scss/src/utopia" as utopia;
+@use "_vars" as *;
+@use "_hero" as *;
+@use "components/_infobar" as *;
+@use "components/_buttons" as *;
+
+:root {
+  @include utopia.generateTypeScale(
+    (
+      "minWidth": 320,
+      "maxWidth": 2160,
+      "minFontSize": 16,
+      "maxFontSize": 20,
+      "minTypeScale": 1.25,
+      "maxTypeScale": 1.618,
+      "positiveSteps": 3,
+      "negativeSteps": 2,
+      "prefix": "font-",
+      "relativeTo": "viewport-width",
+    )
+  );
+  @include utopia.generateSpaceScale(
+    (
+      "minWidth": 320,
+      "maxWidth": 2160,
+      "minSize": 16,
+      "maxSize": 20,
+      "positiveSteps": (
+        1.5,
+        2,
+        3,
+        4,
+        6,
+        45,
+      ),
+      "negativeSteps": (
+        0.75,
+        0.5,
+        0.25,
+      ),
+      "customSizes": (
+        "s-l",
+        "s-m",
+        "xs-s",
+      ),
+      "prefix": "space-",
+      "relativeTo": "viewport-width",
+    )
+  );
+}
+
+.atomic-age-regular {
+  font-family: "Atomic Age", system-ui;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.roboto {
+  font-family: "Roboto", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400-700;
+  font-style: normal;
+  font-variation-settings: "width" 100;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.container {
+  width: var(--fluid-260-1280);
+  font-family: $heading-font;
+  margin: 0 auto;
+  width: 100%;
+}

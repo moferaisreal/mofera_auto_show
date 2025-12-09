@@ -1,0 +1,23 @@
+@use "../vars" as *;
+.infobar {
+  background-color: $white;
+  padding: var(--space-m-l);
+  display: flex;
+  justify-content: space-around;
+  font-family: $primary-font;
+  color: $text-primary;
+  flex-wrap: wrap;
+
+  &__info {
+    display: flex;
+    gap: var(--space-l-xl);
+
+    &__item {
+      font-size: var(--font--1);
+      b {
+        font-size: var(--font-0);
+        display: block;
+      }
+    }
+  }
+}

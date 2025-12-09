@@ -1,0 +1,14 @@
+{
+  "png": {
+    "compressionLevel": 9,
+    "filters": "auto",
+    "quality": 75,
+    "progressive": true
+  },
+  "jpeg": {
+    "compressionLevel": 9,
+    "filters": "auto",
+    "quality": 75,
+    "progressive": true
+  }
+}

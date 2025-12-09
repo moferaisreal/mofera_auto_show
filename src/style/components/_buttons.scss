@@ -1,0 +1,15 @@
+@use "../vars" as *;
+
+.button {
+  padding: var(--space-xs-s);
+  font-size: var(--font-0);
+  cursor: pointer;
+  font-family: $primary-font;
+  text-decoration: none;
+  font-weight: bold;
+  align-items: center;
+  &--primary {
+    background-color: $blue-dark;
+    color: $gray-200;
+  }
+}
