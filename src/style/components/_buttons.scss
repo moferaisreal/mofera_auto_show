@@ -12,4 +12,8 @@
     background-color: $blue-dark;
     color: $gray-200;
   }
+  &:hover {
+    background-color: $blue-light;
+    transform: scale(1.1);
+  }
 }
