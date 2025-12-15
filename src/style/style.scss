@@ -3,6 +3,8 @@
 @use "_hero" as *;
 @use "components/_infobar" as *;
 @use "components/_buttons" as *;
+@use "_features" as *;
+@use "_footer" as *;
 
 :root {
   @include utopia.generateTypeScale(
@@ -31,7 +33,6 @@
         3,
         4,
         6,
-        45,
       ),
       "negativeSteps": (
         0.75,
@@ -47,6 +48,17 @@
       "relativeTo": "viewport-width",
     )
   );
+  @include utopia.generateClamps(
+    (
+      "minWidth": 320,
+      "maxWidth": 2160,
+      "pairs": (
+        (160, 520),
+      ),
+      "prefix": "image-",
+      "relativeTo": "viewport-width",
+    )
+  ); /* responsável pelas imagens fluídas da .features */
 }
 
 .atomic-age-regular {

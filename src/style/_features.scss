@@ -1,0 +1,47 @@
+@use "_vars" as *;
+
+.features {
+  padding: var(--space-l-xl) var(--space-m-l);
+  &--expo {
+    background-image: linear-gradient($blue-dark, $red-light);
+  }
+  &--drift {
+    background-image: linear-gradient($red-light, $blue-dark);
+  }
+  &--burnout {
+    background-image: linear-gradient($blue-dark, $red-light);
+  }
+  &--stunts {
+    background-image: linear-gradient($red-light, $blue-dark);
+  }
+
+  .container {
+    display: flex;
+    justify-content: center;
+    gap: var(--space-l-xl);
+
+    &--rtl {
+      flex-direction: row-reverse;
+    }
+  }
+
+  &__image {
+    max-width: var(--image-160-520);
+    max-height: var(--image-160-520);
+  }
+
+  &__detail {
+    &__title {
+      font-family: $heading-font;
+      font-size: var(--font-1);
+      font-weight: bold;
+      margin-bottom: var(--space-s-m);
+    }
+
+    &__text {
+      font-family: $primary-font;
+      font-size: var(--font-0);
+      line-height: var(--space-s-m);
+    }
+  }
+}

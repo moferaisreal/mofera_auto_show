@@ -11,15 +11,20 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="style/style.scss" />
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
   </head>
   <body>
     <header class="hero">
       <div class="container">
         <img class="hero__logo" src="images/logo.jpg" alt="HERO logo" />
-        <p class="hero__text">
-          O Mofera Auto Show é o maior evento de carros do Norte/Nordeste do
-          Brasil, reunindo entusiastas e amantes de automóveis em uma celebração
-          única da cultura automotiva. Começando em: 10d 12h 30m 45s
+        <p class="hero__text" id="heroText">
+          O Mofera Auto Show é o maior evento de carros do PLANETA, reunindo
+          entusiastas e amantes de automóveis em uma celebração única da cultura
+          automotiva. Começando em: <span id="counter"></span>
         </p>
         <div class="infobar">
           <ul class="infobar__info">
@@ -27,12 +32,148 @@
               <b>Localização</b> Daikoku Parking Area - Yokohama
             </li>
             <li class="infobar__info__item"><b>Preço</b>R$250,00</li>
-            <li class="infobar__info__item"><b>Quando</b>19/12/25 às 12h</li>
+            <li class="infobar__info__item"><b>Quando</b>19/12/35 às 12h</li>
           </ul>
           <a href="#" class="button button--primary">Garanta seu ingresso</a>
         </div>
       </div>
     </header>
+    <section class="features features--expo">
+      <div class="container" data-aos="fade-right">
+        <div class="features__detail">
+          <h2 class="features__detail__title">Exposição de carros</h2>
+          <p class="features__detail__text">
+            No coração do Auto Show, a exposição de carros é um verdadeiro
+            espetáculo de design, potência e inovação. Dos clássicos que
+            marcaram gerações às máquinas futuristas que apontam para o amanhã,
+            cada veículo conta uma história única e desperta emoções intensas. É
+            o espaço perfeito para apaixonados por velocidade, colecionadores e
+            curiosos que desejam vivenciar de perto a evolução da indústria
+            automobilística. Prepare-se para se encantar com linhas arrojadas,
+            motores que rugem e detalhes que transformam cada modelo em uma obra
+            de arte sobre rodas.
+          </p>
+        </div>
+        <img
+          class="features__image"
+          src="./images/img_dstq_1.jpg"
+          alt="Exposição"
+        />
+      </div>
+    </section>
+    <section class="features features--drift">
+      <div class="container container--rtl" data-aos="fade-left">
+        <div class="features__detail">
+          <h2 class="features__detail__title">Show de Drift</h2>
+          <p class="features__detail__text">
+            O drift é a arte de transformar velocidade em espetáculo. Com curvas
+            desafiadoras e pneus que deslizam no limite da aderência, cada
+            manobra é uma demonstração de técnica, coragem e precisão. No Auto
+            Show, os pilotos levam o público ao delírio ao controlar seus carros
+            em derrapagens controladas, criando uma dança emocionante entre
+            potência e habilidade. É a fusão perfeita entre adrenalina e estilo,
+            onde cada curva se torna palco de pura emoção.
+          </p>
+        </div>
+        <img
+          class="features__image"
+          src="./images/img_dstq_2.jpg"
+          alt="Exposição"
+        />
+      </div>
+    </section>
+    <section class="features features--burnout">
+      <div class="container" data-aos="fade-right">
+        <div class="features__detail">
+          <h2 class="features__detail__title">Burnout</h2>
+          <p class="features__detail__text">
+            O burnout é pura explosão de energia e espetáculo visual. Pneus
+            giram em alta rotação, liberando nuvens de fumaça que tomam conta do
+            ambiente e despertam aplausos da plateia. É a combinação perfeita de
+            força bruta e ousadia, onde cada piloto desafia os limites da
+            máquina para criar um show vibrante e inesquecível. No Auto Show, o
+            burnout transforma o asfalto em palco e cada giro em uma celebração
+            da paixão automobilística.
+          </p>
+        </div>
+        <img
+          class="features__image"
+          src="./images/img_dstq_3.jpg"
+          alt="Exposição"
+        />
+      </div>
+    </section>
+    <section class="features features--stunts">
+      <div class="container container--rtl" data-aos="fade-left">
+        <div class="features__detail">
+          <h2 class="features__detail__title">Acrobacias</h2>
+          <p class="features__detail__text">
+            As acrobacias automobilísticas são o ápice da ousadia e da
+            criatividade sobre rodas. Saltos espetaculares, giros controlados e
+            manobras que desafiam a gravidade transformam o palco em um
+            verdadeiro show de adrenalina. Cada apresentação é uma mistura de
+            técnica, coragem e espetáculo visual, capaz de prender a atenção do
+            público do início ao fim. No Auto Show, as acrobacias revelam o lado
+            mais radical da paixão pelos carros, onde a emoção e a surpresa se
+            encontram em cada movimento.
+          </p>
+        </div>
+        <img
+          class="features__image"
+          src="./images/img_dstq_4.jpg"
+          alt="Exposição"
+        />
+      </div>
+    </section>
+    <footer class="footer" id="footer">
+      <!-- Language Selector -->
+      <div class="footer__section footer__section--languages">
+        <button class="footer__button" id="lang-toggle">Languages ▾</button>
+        <div class="footer__dropdown" id="lang-dropdown">
+          <button class="footer__language">English</button>
+          <button class="footer__language">Mandarin</button>
+          <button class="footer__language">Hindi</button>
+          <button class="footer__language">Spanish</button>
+          <button class="footer__language">French</button>
+          <button class="footer__language">Arabic</button>
+          <button class="footer__language">Bengali</button>
+          <button class="footer__language">Portuguese</button>
+          <button class="footer__language">Russian</button>
+          <button class="footer__language">Urdu</button>
+        </div>
+      </div>
+
+      <!-- Social Links -->
+      <div class="footer__section footer__section--social">
+        <a
+          href="https://www.instagram.com/mrmarcelorocha/"
+          class="footer__icon"
+          aria-label="Instagram"
+        >
+          <i class="fab fa-instagram"></i>
+        </a>
+        <a
+          href="https://x.com/moferapontotxt"
+          class="footer__icon"
+          aria-label="X (Twitter)"
+        >
+          <i class="fab fa-x-twitter"></i>
+        </a>
+        <a
+          href="https://github.com/moferaisreal"
+          class="footer__icon"
+          aria-label="GitHub"
+        >
+          <i class="fab fa-github"></i>
+        </a>
+      </div>
+
+      <!-- Contact -->
+      <div class="footer__section footer__section--contact">
+        <button class="footer__contact-btn">Contact Us</button>
+      </div>
+    </footer>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
     <script src="scripts/script.js"></script>
   </body>
 </html>

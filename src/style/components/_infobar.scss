@@ -11,6 +11,8 @@
   &__info {
     display: flex;
     gap: var(--space-l-xl);
+    list-style: none;
+    padding-bottom: var(--space-xs-s);
 
     &__item {
       font-size: var(--font--1);

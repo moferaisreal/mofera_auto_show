@@ -1,0 +1,148 @@
+@use "vars" as *;
+
+.footer {
+  background-image: linear-gradient($blue-dark, $red-light);
+  color: $text-secondary;
+  font-family: $primary-font;
+  padding: var(--space-m) var(--space-l);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: var(--space-l);
+
+  /* ========== FOOTER SECTIONS ========== */
+  &__section {
+    display: flex;
+    align-items: center;
+    position: relative;
+    gap: var(--space-s);
+
+    /* ---------- LANGUAGES ---------- */
+    &--languages {
+      .footer__button {
+        background: transparent;
+        border: 1px solid $gray-600;
+        padding: var(--space-xs) var(--space-s);
+        border-radius: 4px;
+        cursor: pointer;
+        transition: var(--transition);
+
+        &:hover {
+          background-color: $blue-dark;
+          transform: scale(1.05);
+        }
+      }
+
+      .footer__dropdown {
+        display: none;
+        position: absolute;
+        bottom: 100%;
+        left: 0;
+        border: 1px solid $gray-600;
+        border-radius: 4px;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        flex-direction: column;
+        min-width: 160px;
+        opacity: 0;
+        transform: translateY(-10px);
+        overflow: hidden;
+
+        &--active {
+          display: flex;
+          opacity: 1;
+          transform: translateY(0);
+          animation: dropdown-slide 0.3s ease forwards;
+        }
+
+        .footer__language {
+          padding: var(--space-xs);
+          border: none;
+          text-align: left;
+          width: 100%;
+          cursor: pointer;
+          background-color: $blue-light;
+
+          &:hover {
+            background-color: $blue-dark;
+            transform: translateX(5px);
+          }
+        }
+      }
+    }
+
+    /* ---------- SOCIAL MEDIA ---------- */
+    &--social {
+      display: flex;
+      gap: var(--space-m);
+
+      .footer__icon {
+        color: $blue-dark;
+        font-size: var(--font-1);
+
+        &:hover {
+          color: $blue-light;
+          transform: scale(1.15);
+          animation: icon-fade 0.3s ease;
+        }
+      }
+    }
+
+    /* ---------- CONTACT BUTTON ---------- */
+    &--contact {
+      .footer__contact-btn {
+        border: none;
+        padding: var(--space-xs) var(--space-m);
+        border-radius: 4px;
+        cursor: pointer;
+        background: transparent;
+
+        &:hover {
+          background-color: $blue-light;
+          transform: translateY(-2px);
+          box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        &:active {
+          transform: translateY(0);
+          box-shadow: none;
+        }
+      }
+    }
+  }
+
+  /* ========== RESPONSIVE ========== */
+  @media (max-width: 768px) {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: var(--space-m);
+
+    &__section {
+      flex-direction: column;
+    }
+  }
+}
+
+/* ========== KEYFRAMES ========== */
+@keyframes dropdown-slide {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes icon-fade {
+  from {
+    opacity: 0.7;
+    transform: scale(1);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1.15);
+  }
+}
