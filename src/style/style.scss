@@ -5,6 +5,7 @@
 @use "components/_buttons" as *;
 @use "_features" as *;
 @use "_footer" as *;
+@use "components/_counter" as *;
 
 :root {
   @include utopia.generateTypeScale(

@@ -8,12 +8,14 @@
   text-decoration: none;
   font-weight: bold;
   align-items: center;
+  border-radius: 20px;
   &--primary {
-    background-color: $blue-dark;
-    color: $gray-200;
+    background-color: $white;
+    color: $blue-dark;
   }
   &:hover {
-    background-color: $blue-light;
+    background-color: $blue-dark;
+    color: $white;
     transform: scale(1.1);
   }
 }

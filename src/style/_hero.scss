@@ -40,4 +40,13 @@
     display: block;
     border-radius: 50%;
   }
+
+  &__button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: var(--image-160-520);
+    margin: 0 auto;
+    margin-top: var(--space-m-l);
+  }
 }

@@ -1,0 +1,27 @@
+@use "../vars" as *;
+
+.counter {
+  display: flex;
+  justify-content: center;
+  gap: var(--space-m-l);
+
+  &__cards {
+    display: flex;
+    flex-wrap: nowrap;
+    padding: var(--space-s-m) var(--space-m-l);
+    text-align: center;
+    align-items: center;
+    flex-direction: column;
+    color: $white;
+    background-color: $blue-dark;
+    border-radius: 10px;
+    width: var(--space-2xl-3xl);
+    font-size: var(--font-1);
+  }
+
+  :hover {
+    color: $blue-dark;
+    background-color: $white;
+    transform: scale(1.1);
+  }
+}

@@ -19,7 +19,7 @@ const counterElement = setInterval(function () {
   const minutesToEvent = Math.floor((distance % hourInMs) / minuteInMs);
   const secondsToEvent = Math.floor((distance % minuteInMs) / secondInMs);
 
-  console.log(
+  /*  console.log(
     daysToEvent +
       "d " +
       hoursToEvent +
@@ -28,21 +28,16 @@ const counterElement = setInterval(function () {
       "m " +
       secondsToEvent +
       "s "
-  );
-  document.getElementById("counter").innerHTML =
-    daysToEvent +
-    "D " +
-    hoursToEvent +
-    "H " +
-    minutesToEvent +
-    "M " +
-    secondsToEvent +
-    "S ";
+  ); */
+  document.getElementById("days").innerHTML = daysToEvent + "<br>D";
+  document.getElementById("hours").innerHTML = hoursToEvent + "<br>H";
+  document.getElementById("minutes").innerHTML = minutesToEvent + "<br>M";
+  document.getElementById("seconds").innerHTML = secondsToEvent + "<br>S";
 
   if (distance < 0) {
     clearInterval(counterElement);
     document.getElementById("heroText").innerHTML =
-      "O Mofera Auto Show o maior evento de carros do Planeta já expirou, até a próxima edição!";
+      "O Mofera Auto Show o maior evento de carros da Galáxia já expirou, até a próxima edição!";
   }
 }, 1000);
 
